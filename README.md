@@ -20,7 +20,7 @@ sudo apt-get install gfortran
 - Download or clone this repo. Go to the folder.
 - You can install in the Terminal or Anaconda prompt:
 ```sh
-pip install .
+python -m pip install .
 ```
 
 
@@ -48,15 +48,23 @@ API reference and input files formats
 
 Note that [RESIPY](https://gitlab.com/hkex/resipy) has support to generate and read E4D file formats. Consult the E4D documentation if needed.
 
-- `fcr`: fluid conductivity in each cell of the flow and transport model
-- `satr`: saturation in each cell of the flow and transport model
-- `temperature`: fluid conductivity in each cell of the flow and transport model
+- `fcr`: an 1D array of fluid conductivity in each cell of the flow and transport model
+- `satr`: an 1D array of saturation in each cell of the flow and transport model
+- `temperature`: an 1D array of fluid conductivity in each cell of the flow and transport model
 - `sigfile`: file for baseline electrical conductivity for each cell of the ERT model. ERT cells not interpolated will use this value.
 - `petfile`: file for petrophysical parameters for each cell of the ERT model (see below)
 - `mapfile`: name of the binary mapping file. Just use `e4d_inp_f+'_map.bin'`
 - `time`: the timestep to tag the output file name. 
 
 The output file `<time>.00000000.sig` contains the EC values for each cell of the ERT mesh, which can then be loaded to a ERT code to run as a forward model.
+
+Ususally, flow and transport variables are outputted as 3D arrays of size . Assuming `fcond` and `sat` are variables in 3D array format, they can be converted to 1D arrays using
+```python
+import numpy as np
+nv = (xnods.shape[0]-1)*(ynods.shape[0]-1)*(znods.shape[0]-1) # number of cells for flow and transport grid
+fcr = np.reshape(fcond,(nv,1),order='F')
+satr = np.reshape(sat,(nv,1),order='F')
+```
 
 
 Petrophysical transform
