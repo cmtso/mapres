@@ -46,7 +46,7 @@ API reference and input files formats
 - `xnods,ynods,znods`: x,y,z coordinates of the flow and transport model in the x,y,z direction respectively. Note the only simple rectangular grid is supported and they should be strictly increasing.
 - `e4d_inp_f`: The ERT mesh file prefixes (in tetgen or E4D format). The program will read a series of mesh files `.1.node`(node list), `.1.ele` (cell list, what node constitutes each element), `.1.face`,`.1.neigh`,`.1.trn` (translation, [0 0 0] if unchanged)
 
-Note that RESIPY has support to generate and read E4D file formats. Consult the E4D documentation if needed.
+Note that [RESIPY](https://gitlab.com/hkex/resipy) has support to generate and read E4D file formats. Consult the E4D documentation if needed.
 
 - `fcr`: fluid conductivity in each cell of the flow and transport model
 - `satr`: saturation in each cell of the flow and transport model
@@ -90,11 +90,11 @@ If you use this library for your work, please cite [this paper](https://doi.org/
 BibTex code:
 ```latex
 @article{JOHNSON201772,
-    title = "PFLOTRAN-E4D: A parallel open source PFLOTRAN module for simulating time-lapse electrical resistivity data",
-    journal = "Computers & Geosciences",
-    volume = "99",
-    pages = "72 - 80",
-    year = "2017",
+    title = {{PFLOTRAN-E4D: A parallel open source PFLOTRAN module for simulating time-lapse electrical resistivity data}},
+    journal = {{Computers & Geosciences}},
+    volume = {99},
+    pages = {72 - 80},
+    year = {2017},
     issn = "0098-3004",
     doi = "https://doi.org/10.1016/j.cageo.2016.09.006",
     url = "http://www.sciencedirect.com/science/article/pii/S0098300416304289",
