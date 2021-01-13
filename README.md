@@ -95,11 +95,9 @@ BibTex code:
     volume = {99},
     pages = {72 - 80},
     year = {2017},
-    issn = "0098-3004",
-    doi = "https://doi.org/10.1016/j.cageo.2016.09.006",
-    url = "http://www.sciencedirect.com/science/article/pii/S0098300416304289",
-    author = "Timothy C. Johnson and Glenn E. Hammond and Xingyuan Chen",
-    keywords = "Hydrogeophysics, Time-lapse geophysics, Electrical resistivity tomography, Groundwater, Simulation, Multi-physics, Parallel, Open-source",
+    doi = {https://doi.org/10.1016/j.cageo.2016.09.006},
+    author = {imothy C. Johnson and Glenn E. Hammond and Xingyuan Chen},
+    keywords = {Hydrogeophysics, Time-lapse geophysics, Electrical resistivity tomography, Groundwater, Simulation, Multi-physics, Parallel, Open-source}
 }
 ```
 
