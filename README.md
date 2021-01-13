@@ -38,8 +38,8 @@ Examining the [test file](tests/other_file.md) will help you understand how to u
 What it does and how it works?
 ------------------------------------------
 It contains two functions:
-- `map_res.somef90.mesh_interp(xnods,ynods,znods,e4d_inp_f)` create a '.bin' binary executable for interpolation. It determines to weights for interpolation and is the time-consuming part. It only needs to run once even if you need to map multiple timesteps, as long as the two meshes stayed unchanged.
-- `map_res.somef90.map_waxsmit(...)` maps variables (e.g. fluid conductivity and saturation) very efficiently between the two meshes once the binary executable is created and return **electrical conductivity (EC, unit=S/m)** for each cell in the ERT mesh via petrophysical transform (Archie/Waxman Smit).
+- `map_res.mesh_interp(xnods,ynods,znods,e4d_inp_f)` create a '.bin' binary executable for interpolation. It determines to weights for interpolation and is the time-consuming part. It only needs to run once even if you need to map multiple timesteps, as long as the two meshes stayed unchanged.
+- `map_res.map_waxsmit(fcr,satr,porosity,temperature,sigfile,petfile,mapfile,time)` maps variables (e.g. fluid conductivity and saturation) very efficiently between the two meshes once the binary executable is created and return **electrical conductivity (EC, unit=S/m)** for each cell in the ERT mesh via petrophysical transform (Archie/Waxman Smit).
 
 
 API reference and input files formats
