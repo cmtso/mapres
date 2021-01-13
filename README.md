@@ -1,5 +1,5 @@
 # map_res
-A lightweight efficient python library to interpolate and map output from a 3D flow and transport model (rectangular mesh) to a ERT mesh and perform petrophysical transform to obtain resistivities. It is useful for coupled hydrogeophysical simulations to link flow and transport code to ERT code. An example application is mapping from SEAWAT to RESIPY, which I include in a accompanying Jupyter notebook.
+A lightweight efficient python library to interpolate and map output from a 3D flow and transport model (rectangular mesh) to a ERT mesh and perform petrophysical transform to obtain resistivities. It is useful for coupled hydrogeophysical simulations to link flow and transport code to ERT code. An example application is mapping from SEAWAT to RESIPY, which I include in a accompanying Jupyter notebook *(coming soon)*.
 
 The library includes two FORTRAN subroutines written by Tim Johnson for [PFLOTRAN-E4D](https://doi.org/10.1016/j.cageo.2016.09.006) (Johnson et al. 2017). It was part of the PFLOTRAN distribution but has now discontinued. He has kindly provided the FORTRAN subroutines and some other python scripts and has given me permission to package it as a python library here. Please cite the original PFLOTRAN-E4D paper and find more details of the method there.
 
@@ -60,7 +60,7 @@ Note that [RESIPY](https://gitlab.com/hkex/resipy) has support to generate and r
 
 The output file `<time>.00000000.sig` contains the EC values for each cell of the ERT mesh, which can then be loaded to a ERT code to run as a forward model.
 
-Ususally, flow and transport variables are outputted as 3D arrays of size . Assuming `fcond` and `sat` are variables in 3D array format, they can be converted to 1D arrays using
+Ususally, flow and transport variables are outputted as 3D arrays. Assuming `fcond` and `sat` are variables in 3D array format, they can be converted to 1D arrays using
 ```python
 import numpy as np
 nv = (xnods.shape[0]-1)*(ynods.shape[0]-1)*(znods.shape[0]-1) # number of cells for flow and transport grid
