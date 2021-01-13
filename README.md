@@ -71,8 +71,8 @@ For other etrophysical transforms, you can modify the code accordingly.
 Other applications of this mapping script
 ------------------------------------------
 
-eSTOMP to E4D (Rockhold et al. 2020) https://doi.org/10.1007/s10040-020-02167-1
-PFLOTRAN to E4D (Tso et al. 2019) https://doi.org/10.1007/s10040-020-02167-1
+- eSTOMP to E4D (Rockhold et al. 2020) https://doi.org/10.1007/s10040-020-02167-1
+- PFLOTRAN to E4D (Tso et al. 2019) https://doi.org/10.1007/s10040-020-02167-1
 
 
 You must cite:
