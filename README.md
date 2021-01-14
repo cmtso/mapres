@@ -33,7 +33,7 @@ python test_myfunctions.py
 ```
 If terminated normally, two files *emesh7t.map* and *0.00000000.sig* are generated.
 
-Examining the [test file](tests/other_file.md) will help you understand how to use this library.
+Examining the [test file](tests/test_myfunctions.py) will help you understand how to use this library.
 
 What it does and how it works?
 ------------------------------------------
