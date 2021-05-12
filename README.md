@@ -3,7 +3,7 @@ A lightweight efficient python library to interpolate and map output from a 3D f
 
 The library includes two FORTRAN subroutines written by Tim Johnson for [PFLOTRAN-E4D](https://doi.org/10.1016/j.cageo.2016.09.006) (Johnson et al. 2017). It was part of the PFLOTRAN distribution but has now discontinued. He has kindly provided the FORTRAN subroutines and some other python scripts and has given me permission to package it as a python library here. Please cite the original PFLOTRAN-E4D paper and find more details of the method there.
 
-FORTRAN codes can be called in python using  `f2py` in `numpy`. In its original form, the user needs to compile the FORTRAN subroutines on their own before they can use it. I can packaged packaged it as a python library for convenience (so that the f2py installation steps are automated and there is no need to track the path of the scripts).
+FORTRAN codes can be called in python using  `f2py` in `numpy`. In its original form, the user needs to compile the FORTRAN subroutines on their own before they can use it. I packaged it as a python library for convenience (so that the f2py installation steps are automated and there is no need to track the path of the scripts).
 
 **You must cite this work using the instruction below.**
 
