@@ -11,8 +11,8 @@ from setuptools import find_packages
 
 from numpy.distutils.core import setup, Extension
 
-setup(name="map_res",
+setup(name="mapres",
       version="0.0.1",
-    sources=['src/map_res/test_interp2.f90','src/map_res/mapit.f90'],
+    sources=['src/mapres/test_interp2.f90','src/mapres/mapit.f90'],
     f2py_options=['--quiet'],
       ext_modules=[])
