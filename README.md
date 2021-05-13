@@ -1,4 +1,4 @@
-# map_res
+# mapres
 A lightweight efficient python library to interpolate and map output from a 3D flow and transport model (rectangular mesh) to a ERT mesh and perform petrophysical transform to obtain resistivities. It is useful for coupled hydrogeophysical simulations to link flow and transport code to ERT code. An example application is mapping from SEAWAT to RESIPY, which I include in a accompanying Jupyter notebook *(coming soon)*.
 
 The library includes two FORTRAN subroutines written by Tim Johnson for [PFLOTRAN-E4D](https://doi.org/10.1016/j.cageo.2016.09.006) (Johnson et al. 2017). It was part of the PFLOTRAN distribution but has now discontinued. He has kindly provided the FORTRAN subroutines and some other python scripts and has given me permission to package it as a python library here. Please cite the original PFLOTRAN-E4D paper and find more details of the method there.
@@ -38,8 +38,8 @@ Examining the [test file](tests/test_myfunctions.py) will help you understand ho
 What it does and how it works?
 ------------------------------------------
 It contains two functions:
-- `map_res.mesh_interp(xnods,ynods,znods,e4d_inp_f)` create a '.bin' binary executable for interpolation. It determines to weights for interpolation and is the time-consuming part. It only needs to run once even if you need to map multiple timesteps, as long as the two meshes stayed unchanged.
-- `map_res.map_waxsmit(fcr,satr,porosity,temperature,sigfile,petfile,mapfile,time)` maps variables (e.g. fluid conductivity and saturation) very efficiently between the two meshes once the binary executable is created and return **electrical conductivity (EC, unit=S/m)** for each cell in the ERT mesh via petrophysical transform (Archie/Waxman Smit).
+- `mapres.mesh_interp(xnods,ynods,znods,e4d_inp_f)` create a '.bin' binary executable for interpolation. It determines to weights for interpolation and is the time-consuming part. It only needs to run once even if you need to map multiple timesteps, as long as the two meshes stayed unchanged.
+- `mapres.map_waxsmit(fcr,satr,porosity,temperature,sigfile,petfile,mapfile,time)` maps variables (e.g. fluid conductivity and saturation) very efficiently between the two meshes once the binary executable is created and return **electrical conductivity (EC, unit=S/m)** for each cell in the ERT mesh via petrophysical transform (Archie/Waxman Smit).
 
 
 API reference and input files formats
