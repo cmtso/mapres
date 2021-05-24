@@ -23,6 +23,24 @@ sudo apt-get install gfortran
 python -m pip install .
 ```
 
+Usage without Installation 
+--------------------------
+If you prefer, you can build the fortan executable (.so) and make it callable in Python from f2py.
+```sh
+f2py -c -m test_interp2 test_interp2.f90
+f2py -c -m mapit mapit.f90
+```
+You may need to rename the .so files generated:
+```sh
+cd test_interp2*.so test_interp2.so
+cd mapit*.so mapit.so
+```
+
+And in your python code import the following and use it described elsewhere in this document.
+```
+import mapit
+import test_interp2
+```
 
 Test the installation
 ---------------------
