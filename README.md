@@ -32,8 +32,8 @@ f2py -c -m mapit mapit.f90
 ```
 You may need to rename the .so files generated:
 ```sh
-cd test_interp2*.so test_interp2.so
-cd mapit*.so mapit.so
+mv test_interp2*.so test_interp2.so
+mv mapit*.so mapit.so
 ```
 
 And in your python code import the following and use it described elsewhere in this document.
