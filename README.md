@@ -22,9 +22,10 @@ sudo apt-get install gfortran
 ```sh
 python -m pip install .
 ```
+Sometimes the package install above doesn't work. You can treat the `map_res` folder as a local module and just copy it to each of your project folder.
 
-Usage without Installation 
---------------------------
+Usage without Installation (i.e. compile fortran code yourself) 
+---------------------------------------------------------------
 If you prefer, you can build the fortan executable (.so) and make it callable in Python from f2py.
 ```sh
 f2py -c -m test_interp2 test_interp2.f90
